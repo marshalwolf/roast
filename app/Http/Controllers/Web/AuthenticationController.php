@@ -12,7 +12,7 @@ class AuthenticationController extends Controller
         try {
             return Socialite::with($account)->redirect();
         } catch (\InvalidArgumentException $e) {
-            return redirect('/');
+            return redirect('/login');
         }
     }
     public function getSocialCallback($account)
